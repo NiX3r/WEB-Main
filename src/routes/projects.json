@@ -1,0 +1,16 @@
+[
+    {
+        "topic": "CoronaTracker",
+        "image": "https://raw.githubusercontent.com/nCodesDotEU/CoronaTracker/master/CoronaTracker/coronavirus.ico",
+        "git": "https://github.com/nCodesDotEU/CoronaTracker",
+        "web": "",
+        "description": "This program was created for seminar school project as recession to Corona virus. Program is develop for non-exists hospital. It saved patients and their data about covid data. In databa I store Employees data such as fullname, email, phone, pose, etc. Then Vaccinate, Finds, Vaccine types. And lastable program data such as version and download link to lastest release."
+    },
+    {
+        "topic": "Appwrite Minecraft SDK",
+        "image": "https://raw.githubusercontent.com/nCodesDotEU/Appwrite-Minecraft-Database/master/pictures/block_logo.svg",
+        "git": "https://github.com/nCodesDotEU/Appwrite-Minecraft-Database",
+        "web": "",
+        "description": "Utility Minecraft plugin that creates persistent data storage while using Appwrite as a database. This plugin was a missing piece on the scene for years! Finally, with Appwrite Minecraft SDK, storing data is as simple as /appwrite database NiX3r set money 50. A server makes no longer needs to pay over-priced developers just because there is no simple way to store data without writing Java code."
+    }
+]
