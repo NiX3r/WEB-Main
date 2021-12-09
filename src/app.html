@@ -4,9 +4,40 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>nCodes × main</title>
 		%svelte.head%
 	</head>
-	<body class=" bg-[#2c2c2c] text-[rgb(240,240,240)]">
-		<div id="svelte">%svelte.body%</div>
+	<body class=" text-[rgb(240,240,240)] bg-no-repeat">
+		<div class="bg"></div>
+		<div class="divClass2"></div>
+		<div class="divClass 2xl:w-full 2xl:h-full">
+			<div id="svelte">%svelte.body%</div>
+		</div>
 	</body>
 </html>
+
+<style>
+	.divClass{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.divClass2{
+		position: fixed;
+		min-height: 100vh;
+		min-width: 100vw;
+		top: 0;
+		left: 0;
+		background-color: rgba(55, 55, 55, 0.8);
+	}
+	.bg{
+		min-height: 100vh;
+		min-width: 100vw;
+		position: fixed;
+		background-position: center;
+		background-size: cover;
+		background-image: url("./assets/code.jpg");
+		height: 100%;
+		background-repeat: 0;
+	}
+</style>
