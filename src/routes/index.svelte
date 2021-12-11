@@ -160,7 +160,7 @@
 
 <script>
 
-  import json from '$lib/projects.json';
+  import json from '../../static/assets/projects.json';
 
   let index = 0;
   let description;
