@@ -619,14 +619,20 @@ video {
 .mr-3 {
 	margin-right: 0.75rem;
 }
-.mt-10 {
-	margin-top: 2.5rem;
+.mt-6 {
+	margin-top: 1.5rem;
 }
 .ml-10 {
 	margin-left: 2.5rem;
 }
-.mt-6 {
-	margin-top: 1.5rem;
+.ml-5 {
+	margin-left: 1.25rem;
+}
+.mb-5 {
+	margin-bottom: 1.25rem;
+}
+.mt-8 {
+	margin-top: 2rem;
 }
 .mt-5 {
 	margin-top: 1.25rem;
@@ -734,8 +740,8 @@ video {
 	-o-object-fit: cover;
 	   object-fit: cover;
 }
-.p-10 {
-	padding: 2.5rem;
+.p-7 {
+	padding: 1.75rem;
 }
 .p-2 {
 	padding: 0.5rem;
@@ -746,8 +752,11 @@ video {
 .p-8 {
 	padding: 2rem;
 }
-.p-12 {
-	padding: 3rem;
+.p-4 {
+	padding: 1rem;
+}
+.p-6 {
+	padding: 1.5rem;
 }
 .py-3 {
 	padding-top: 0.75rem;
@@ -846,12 +855,12 @@ video {
 		grid-column: span 9 / span 9;
 	}
 
-	.lg\:col-span-4 {
-		grid-column: span 4 / span 4;
-	}
-
 	.lg\:col-span-8 {
 		grid-column: span 8 / span 8;
+	}
+
+	.lg\:col-span-4 {
+		grid-column: span 4 / span 4;
 	}
 
 	.lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {

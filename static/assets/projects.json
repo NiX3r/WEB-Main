@@ -4,6 +4,7 @@
         "image": "https://github.com/nCodesDotEU/CoronaTracker/blob/master/Documents/PatientsSubFormUpdateQR.png?raw=true",
         "git": "https://github.com/nCodesDotEU/CoronaTracker",
         "web": "",
+        "technologies": "C#, Windows Forms, MySQL, Rest API",
         "description": "CoronaTracker is an application focused on the medical sector, and its primary purpose is to monitor patients, especially their's Covid-19 illnesses and their's vaccination. The application also collects statistics about Covid-19 worldwide from external data sources via API gateways. CoronaTracker is attached to an internal relational database server where it stores all sorts of ..."
     },
     {
@@ -11,6 +12,23 @@
         "image": "https://github.com/nCodesDotEU/Appwrite-Minecraft-Database/blob/b808e81f7a3d71aefd72afdab4d5ea94d9cb9a58/pictures/energy.gif?raw=true",
         "git": "https://github.com/nCodesDotEU/Appwrite-Minecraft-Database",
         "web": "",
+        "technologies": "Java, Appwrite, Minecraft, Bukkit",
         "description": "Utility Minecraft plugin that creates persistent data storage while using Appwrite as a database. This plugin was a missing piece on the scene for years! Finally, with Appwrite Minecraft SDK, storing data is as simple as /appwrite database NiX3r set money 50. A server makes no longer needs to pay over-priced developers just because there is no simple way to store data without writing Java code."
+    },
+    {
+        "topic": "SpradoSoft",
+        "image": "https://github.com/nCodesDotEU/SpradoSoft/blob/master/pictures/app.png?raw=true",
+        "git": "https://github.com/nCodesDotEU/SpradoSoft",
+        "web": "",
+        "technologies": "C#, Windows Forms, MySQL",
+        "description": "Windows desktop application to moderate revisions and customers. The app is connected to a MySQL database server and it can find objects by multiple choices. App also moderate information like contacts, houses, revision man and types, etc. Then app sends notifications via email for missed revisions and notifications via Discord webhooks when errors are caught. *Work in progress*"
+    },
+    {
+        "topic": "DiscordBots",
+        "image": "https://github.com/nCodesDotEU/DiscordBots/blob/master/pictures/animation.gif?raw=true",
+        "git": "https://github.com/nCodesDotEU/DiscordBots",
+        "web": "",
+        "technologies": "Java, Discord, Javacord",
+        "description": "Discord bots are automatize sub programs which are in single one. It can handle multi-threading cause nAdminer have to moderate all sub bots. Bots have to moderate my own Discord server. There's ticket system, giving role by emoting on message or challanger which is programming competition in which You can operate also. *Work in progress*"
     }
 ]

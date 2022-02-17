@@ -12,5 +12,12 @@
         "git": "https://github.com/nCodesDotEU/Appwrite-Minecraft-Database",
         "web": "",
         "description": "Utility Minecraft plugin that creates persistent data storage while using Appwrite as a database. This plugin was a missing piece on the scene for years! Finally, with Appwrite Minecraft SDK, storing data is as simple as /appwrite database NiX3r set money 50. A server makes no longer needs to pay over-priced developers just because there is no simple way to store data without writing Java code."
+    },
+    {
+        "topic": "SpradoSoft",
+        "image": "https://github.com/nCodesDotEU/SpradoSoft/blob/master/pictures/app.png",
+        "git": "https://github.com/nCodesDotEU/SpradoSoft",
+        "web": "",
+        "description": "Windows desktop application to moderate revisions and customers. The app is connected to a MySQL database server and it can find objects via multiple choices. To more specify usage of app you could moderate information like contacts, houses, revision man and types, etc. Then app sends notifications via email for missed revisions and notifications via Discord webhooks when errors are caught. *Work in progress*"
     }
 ]

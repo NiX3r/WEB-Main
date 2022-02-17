@@ -1,5 +1,5 @@
 <div class="container mx-auto mt-3 mb-3 md:mt-20 text-[#f0f0f0] font-mono">
-  <div class="bg-[#515151] rounded-3xl p-10 mx-3">
+  <div class="bg-[#515151] rounded-3xl p-7 mx-3">
     <div class="flex flex-col sm:flex-row justify-between items-center space-y-5 sm:space-y-0">
       <div class="bg-[#2c2c2c] rounded-full py-3 px-6 text-[#7900ff] font-bold md:text-3xl text-2xl"><div class=" animate-pulse">Daniel Iliev</div></div>
 
@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-12 mt-10 gap-6">
+    <div class="grid grid-cols-12 mt-6 gap-6">
       <div class="col-span-12 lg:col-span-3">
         <div class=" bg-[#2c2c2c] rounded-3xl">
           <div class="w-full h-64 p-5">
@@ -46,19 +46,21 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-12 mt-10 gap-6">
+    <div class="grid grid-cols-12 mt-6 gap-6">
       <div class="col-span-12 lg:col-span-9 h-full">
         <div class="bg-[#2c2c2c] rounded-2xl py-3 px-6 h-full">
           <div class="grid grid-cols-12 gap-6 pr-5">
-            <div class="col-span-12 lg:col-span-4">
+            <div class="col-span-12 lg:col-span-8">
+              <h1 class="text-[#ab61ff] font-bold md:text-2xl lg:text-left text-center text-xl p-4">{topic}</h1>
+              <p class=" ml-10">{description}</p>
+              <div class=" text-[#ab61ff] font-bold mt-3 ml-5">Technologies</div> <p class=" ml-10 mb-5">{technologies}</p>
+            </div>
+            <div class="col-span-12 lg:col-span-4 mt-8">
               <div class="w-full h-64 p-5">
                 <img src="{picture}" class="rounded-xl object-cover h-full w-full" alt="" />
               </div>
             </div>
-            <div class="col-span-12 lg:col-span-8">
-              <h1 class="text-[#ab61ff] font-bold md:text-2xl lg:text-left text-center text-xl p-8">{topic}</h1>
-              <p class=" ml-10">{description}</p>
-            </div>
+            
           </div>
 
           <div class="flex flex-row justify-between items-center space-y-5 lg:space-y-0 pr-5 pl-5">
@@ -84,7 +86,7 @@
       </div>
       <div class="col-span-12 lg:col-span-3 h-full">
         <div class=" bg-[#2c2c2c] rounded-3xl h-full">
-          <div class="w-full h-full p-12">
+          <div class="w-full h-full p-6">
             <div class=" text-[#ab61ff] font-bold md:text-2xl text-xl text-center">this.GetSkills()</div>
 
             <div class=" bg-[#7809f77e] rounded-full mt-6 h-3 w-full"><div class="one bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
@@ -95,6 +97,9 @@
 
             <div class=" bg-[#7809f77e] rounded-full mt-5 h-3 w-full"><div class="three bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
             <div class="text-center">Graphic user interface</div>
+
+            <div class=" bg-[#7809f77e] rounded-full mt-5 h-3 w-full"><div class="one bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
+            <div class="text-center">Communication</div>
 
             <div class=" bg-[#7809f77e] rounded-full mt-5 h-3 w-full"><div class="four bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
             <div class="text-center">Code with fun</div>
@@ -168,6 +173,7 @@
   let git;
   let web;
   let picture;
+  let technologies;
   setData();
 
   let interval;
@@ -202,6 +208,8 @@
     git = json[index].git;
     web = json[index].web;
     picture = json[index].image;
+    // @ts-ignore
+    technologies = json[index].technologies;
   }
 
 </script>
