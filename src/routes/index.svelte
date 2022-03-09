@@ -1,7 +1,7 @@
 <div class="container mx-auto mt-3 mb-3 md:mt-20 text-[#f0f0f0] font-mono">
   <div class="bg-[#515151] rounded-3xl p-7 mx-3">
     <div class="flex flex-col sm:flex-row justify-between items-center space-y-5 sm:space-y-0">
-      <div class="bg-[#2c2c2c] rounded-full py-3 px-6 text-[#7900ff] font-bold md:text-3xl text-2xl"><div class=" animate-pulse">Daniel Iliev</div></div>
+      <div class="bg-[#2c2c2c] rounded-full py-3 px-6 text-[#7900ff] font-bold md:text-3xl text-2xl"><div class="animate-pulse">Daniel "NiX3r" Iliev</div></div>
 
       <div class="flex">
         <div class="p-2 rounded-full bg-[#2c2c2c] mr-3 hover:bg-[#2d0857]">
@@ -11,7 +11,7 @@
         </div>
 
         <div class="p-2 rounded-full bg-[#2c2c2c] mr-3 hover:bg-[#2d0857]">
-          <a href="https://github.com/nCodesDotEU">
+          <a href="https://github.com/NiX3r">
             <img src=".\assets\github.png" class=" rounded-full h-10 w-10" alt="Github">
           </a>
         </div>
@@ -34,7 +34,7 @@
       <div class="col-span-12 lg:col-span-3">
         <div class=" bg-[#2c2c2c] rounded-3xl">
           <div class="w-full h-64 p-5">
-            <img src="https://picsum.photos/seed/cuako/200/200" class="rounded-xl object-cover h-full w-full" alt="" />
+            <img src=".\assets\lion.png" class="rounded-xl object-cover h-full w-full" alt="" />
           </div>
         </div>
       </div>
