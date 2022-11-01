@@ -1,7 +1,9 @@
 <div class="container mx-auto mt-3 mb-3 md:mt-20 text-[#f0f0f0] font-mono">
   <div class="bg-[#515151] rounded-3xl p-7 mx-3">
     <div class="flex flex-col sm:flex-row justify-between items-center space-y-5 sm:space-y-0">
-      <div class="bg-[#2c2c2c] rounded-full py-3 px-6 text-[#7900ff] font-bold md:text-3xl text-2xl"><div class="animate-pulse">Daniel "NiX3r" Iliev</div></div>
+      <div class="bg-[#2c2c2c] rounded-full py-3 px-6 text-[#7900ff] font-bold md:text-3xl text-2xl">Daniel "NiX3r" Iliev</div>
+      
+      <p class="text-[#2c2c2c]">© 2020-2023 Daniel Iliev, version: 21.08.2002</p>
 
       <div class="flex">
         <div class="p-2 rounded-full bg-[#2c2c2c] mr-3 hover:bg-[#2d0857]">
@@ -98,8 +100,8 @@
             <div class=" bg-[#7809f77e] rounded-full mt-5 h-3 w-full"><div class="three bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
             <div class="text-center">Graphic user interface</div>
 
-            <div class=" bg-[#7809f77e] rounded-full mt-5 h-3 w-full"><div class="one bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
-            <div class="text-center">Communication</div>
+            <div class=" bg-[#7809f77e] rounded-full mt-5 h-3 w-full"><div class="five bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
+            <div class="text-center">Web development</div>
 
             <div class=" bg-[#7809f77e] rounded-full mt-5 h-3 w-full"><div class="four bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
             <div class="text-center">Code with fun</div>
@@ -154,9 +156,21 @@
   90%  {width: 100%;}
 }
 
+@keyframes load-five {
+  0%   {width: 0%;}
+  90%  {width: 50%;}
+}
+
 .four{
   width: 100%;
   animation-name: load-four;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+.five{
+  width: 50%;
+  animation-name: load-five;
   animation-duration: 3s;
   animation-iteration-count: 1;
 }
@@ -167,6 +181,7 @@
 
   import json from '../../static/assets/projects.json';
 
+  let interval;
   let index = 0;
   let description;
   let topic;
@@ -176,11 +191,14 @@
   let technologies;
   setData();
 
-  let interval;
-  interval = setInterval(() => {
+
+  function resetData(){
+    clearInterval(interval);
+    interval = setInterval(() => {
       right();
       setData();
     }, 10000);
+  }
 
   function left(){
     if(index === 0){
@@ -210,6 +228,7 @@
     picture = json[index].image;
     // @ts-ignore
     technologies = json[index].technologies;
+    resetData();
   }
 
 </script>

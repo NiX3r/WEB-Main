@@ -30,5 +30,13 @@
         "web": "",
         "technologies": "Java, Discord, Javacord",
         "description": "Discord bots are automatize sub programs which are in single one. It can handle multi-threading cause nAdminer have to moderate all sub bots. Bots have to moderate my own Discord server. There's ticket system, giving role by emoting on message or challanger which is programming competition in which You can operate also. *Work in progress*"
+    },
+    {
+        "topic": "SoftBot",
+        "image": "https://github.com/NiX3r/SoftBot/blob/main/web/assets/logo03.png?raw=true",
+        "git": "https://github.com/NiX3r/SoftBot",
+        "web": "",
+        "technologies": "Java, Discord, Javacord, MySQL, Databases",
+        "description": "Discord bot which allows any server access some sort of information around Airsoft in Czechia and Slovakia. It was made by Airsoft player for Airsoft players. SoftBot could handle data such as games, teams or bazaar (offers and inquires). "
     }
 ]

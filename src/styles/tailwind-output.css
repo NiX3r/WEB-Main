@@ -667,12 +667,6 @@ video {
 .w-7 {
 	width: 1.75rem;
 }
-@-webkit-keyframes pulse {
-
-	50% {
-		opacity: .5;
-	}
-}
 @keyframes pulse {
 
 	50% {
@@ -680,8 +674,7 @@ video {
 	}
 }
 .animate-pulse {
-	-webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-	        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+	animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 .grid-cols-12 {
 	grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -800,6 +793,10 @@ video {
 .text-\[\#7900ff\] {
 	--tw-text-opacity: 1;
 	color: rgba(121, 0, 255, var(--tw-text-opacity));
+}
+.text-\[\#2c2c2c\] {
+	--tw-text-opacity: 1;
+	color: rgba(44, 44, 44, var(--tw-text-opacity));
 }
 .text-\[\#ab61ff\] {
 	--tw-text-opacity: 1;
