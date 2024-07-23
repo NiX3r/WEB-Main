@@ -1,42 +1,100 @@
 [
     {
+        "key": "coronatracker",
         "topic": "CoronaTracker",
         "image": "https://github.com/nCodesDotEU/CoronaTracker/blob/master/Documents/PatientsSubFormUpdateQR.png?raw=true",
         "git": "https://github.com/nCodesDotEU/CoronaTracker",
         "web": "",
-        "technologies": "C#, Windows Forms, MySQL, Rest API",
+        "technologies":[
+            "C#",
+            "Windows Forms",
+            "MySQL",
+            "Rest API"
+        ],
         "description": "CoronaTracker is an application focused on the medical sector, and its primary purpose is to monitor patients, especially their's Covid-19 illnesses and their's vaccination. The application also collects statistics about Covid-19 worldwide from external data sources via API gateways. CoronaTracker is attached to an internal relational database server where it stores all sorts of ..."
     },
     {
+        "key": "appwritemcsdk",
         "topic": "Appwrite Minecraft SDK",
         "image": "https://github.com/nCodesDotEU/Appwrite-Minecraft-Database/blob/b808e81f7a3d71aefd72afdab4d5ea94d9cb9a58/pictures/energy.gif?raw=true",
         "git": "https://github.com/nCodesDotEU/Appwrite-Minecraft-Database",
         "web": "",
-        "technologies": "Java, Appwrite, Minecraft, Bukkit",
+        "technologies": [
+            "Java",
+            "Appwrite",
+            "Minecraft",
+            "Bukkit"
+        ],
         "description": "Utility Minecraft plugin that creates persistent data storage while using Appwrite as a database. This plugin was a missing piece on the scene for years! Finally, with Appwrite Minecraft SDK, storing data is as simple as /appwrite database NiX3r set money 50. A server makes no longer needs to pay over-priced developers just because there is no simple way to store data without writing Java code."
     },
     {
+        "key": "spradosoft",
         "topic": "SpradoSoft",
         "image": "https://github.com/nCodesDotEU/SpradoSoft/blob/master/pictures/app.png?raw=true",
         "git": "https://github.com/nCodesDotEU/SpradoSoft",
         "web": "",
-        "technologies": "C#, Windows Forms, MySQL",
+        "technologies": [
+            "C#",
+            "Windows Forms",
+            "MySQL"
+        ],
         "description": "Windows desktop application to moderate revisions and customers. The app is connected to a MySQL database server and it can find objects by multiple choices. App also moderate information like contacts, houses, revision man and types, etc. Then app sends notifications via email for missed revisions and notifications via Discord webhooks when errors are caught. *Work in progress*"
     },
     {
+        "key": "discordbots",
         "topic": "DiscordBots",
         "image": "https://github.com/nCodesDotEU/DiscordBots/blob/master/pictures/animation.gif?raw=true",
         "git": "https://github.com/nCodesDotEU/DiscordBots",
         "web": "",
-        "technologies": "Java, Discord, Javacord",
+        "technologies": [
+            "Java",
+            "Discord",
+            "Javacord"
+        ],
         "description": "Discord bots are automatize sub programs which are in single one. It can handle multi-threading cause nAdminer have to moderate all sub bots. Bots have to moderate my own Discord server. There's ticket system, giving role by emoting on message or challanger which is programming competition in which You can operate also. *Work in progress*"
     },
     {
+        "key": "softbot",
         "topic": "SoftBot",
         "image": "https://github.com/NiX3r/SoftBot/blob/main/web/assets/logo03.png?raw=true",
         "git": "https://github.com/NiX3r/SoftBot",
         "web": "",
-        "technologies": "Java, Discord, Javacord, MySQL, Databases",
+        "technologies": [
+            "Java",
+            "Discord",
+            "Javacord",
+            "MySQL"
+        ],
         "description": "Discord bot which allows any server access some sort of information around Airsoft in Czechia and Slovakia. It was made by Airsoft player for Airsoft players. SoftBot could handle data such as games, teams or bazaar (offers and inquires). "
+    },
+    {
+        "key": "poisys",
+        "topic": "Police Information System",
+        "image": "https://poisys.iliev.cz/~gitbook/image?url=https%3A%2F%2F4255688851-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FzmjHsAsb8PFGzffsJ2SZ%252Fuploads%252FbtJ9GNXgIUJYvHoypkGZ%252FBez_nazvu.webp%3Falt%3Dmedia%26token%3Da56cb399-f6f6-4eb8-a9b8-a6178c574e5e&width=768&dpr=1&quality=100&sign=7bf4d44b&sv=1",
+        "git": "https://github.com/NiX3r/PoliceInformationSystem",
+        "web": "https://poisys.iliev.cz/",
+        "technologies":[
+            "C#",
+            "MAUI",
+            "MySQL",
+            "Xamarin",
+            "XAML",
+            "Multiplatform"
+        ],
+        "description": "Simulation police system for the administration of offences and crimes. Two versions. Administrative and mobile. The administrative one is only run by the police headquarters and is used to administer all records. The mobile one is only used to display data on citizens, tasks and teams and to record offences. One can use the mobile version to store QR codes about the offences/crimes of a given citizen, which can then be scanned ..."
+    },
+    {
+        "key": "nixbot",
+        "topic": "NixBot",
+        "image": "https://iliev.cz/assets/lion.png",
+        "git": "https://github.com/NiX3r/NixBot",
+        "web": "https://discord.gg/AA9CZEcYHV",
+        "technologies":[
+            "Java",
+            "Javacord",
+            "MySQL",
+            "Discord"
+        ],
+        "description": "Discord bot for own server. It has multiple features starts from join/leave messages, through music DJ, to ticket system. More info on project website"
     }
 ]

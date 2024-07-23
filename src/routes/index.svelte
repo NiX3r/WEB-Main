@@ -1,13 +1,13 @@
-<div class="container mx-auto mt-3 mb-3 md:mt-20 text-[#f0f0f0] font-mono">
-  <div class="bg-[#515151] rounded-3xl p-7 mx-3">
-    <div class="flex flex-col sm:flex-row justify-between items-center space-y-5 sm:space-y-0">
-      <div class="bg-[#2c2c2c] rounded-full py-3 px-6 text-[#7900ff] font-bold md:text-3xl text-2xl">Daniel "NiX3r" Iliev</div>
+<div class="grid h-screen place-items-center p-3 lg:p-40 text-[#f0f0f0] font-mono select-none">
+  <div class="bg-[#515151] rounded-xl p-5 mx-3">
+    <div class="flex flex-col md:flex-row justify-between items-center space-y-5 md:space-y-0">
+      <div class="bg-[#2c2c2c] rounded-xl py-3 px-6 text-[#7900ff] font-bold md:text-3xl text-2xl">Daniel "NiX3r" Iliev</div>
       
-      <p class="text-[#2c2c2c]">© 2020-2023 Daniel Iliev, version: 21.08.2002</p>
+      <p class="text-[#2c2c2c]">© 2020-{nowYear} Daniel Iliev, version: 21.08.2002</p>
 
       <div class="flex">
         <div class="p-2 rounded-full bg-[#2c2c2c] mr-3 hover:bg-[#2d0857]">
-          <a href="https://discord.com/invite/g892nvr">
+          <a href="https://discord.gg/AA9CZEcYHV">
             <img src=".\assets\discord.png" class=" rounded-full h-10 w-10" alt="Discord"/>
           </a>
         </div>
@@ -32,78 +32,117 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-12 mt-6 gap-6">
+    <div class="grid grid-cols-12 mt-5 gap-5">
       <div class="col-span-12 lg:col-span-3">
-        <div class=" bg-[#2c2c2c] rounded-3xl">
+        <div class="bg-[#2c2c2c] rounded-xl">
           <div class="w-full h-64 p-5">
-            <img src=".\assets\lion.png" class="rounded-xl object-cover h-full w-full" alt="" />
+            <img src=".\assets\lion.png" class="rounded-xl object-scale-down h-full w-full" alt="" />
           </div>
         </div>
       </div>
       <div class="col-span-12 lg:col-span-9 h-full">
-        <div class="bg-[#2c2c2c] rounded-2xl py-3 px-6 h-full">
-          <h1 class="text-[#ab61ff] font-bold md:text-2xl lg:text-left text-center text-xl p-8">a passionate programmer</h1>
+        <div class="bg-[#2c2c2c] rounded-xl py-3 px-6 h-full">
+          <h1 class="text-[#ab61ff] font-bold md:text-2xl lg:text-left text-center text-xl p-8">a passionate software engineer</h1>
           <p class=" ml-10">I'm a young student who's been interested in programming since 2016. I've started learning in C / C++ which lasted me for about 2 years and I felt in love with it. Then I switched to learning Java and somewhat recently C# and with it came SQL connected with it. I can read some other languages as well lik PHP, JS, CSS, HTML, etc. I've already done some projects just for fun or for companies. For example I've developed app for managing house revision connected to remote MySQL server.</p>
         </div>
       </div>
     </div>
 
-    <div class="grid grid-cols-12 mt-6 gap-6">
+    <div class="grid grid-cols-12 mt-5 gap-5">
       <div class="col-span-12 lg:col-span-9 h-full">
-        <div class="bg-[#2c2c2c] rounded-2xl py-3 px-6 h-full">
-          <div class="grid grid-cols-12 gap-6 pr-5">
-            <div class="col-span-12 lg:col-span-8">
-              <h1 class="text-[#ab61ff] font-bold md:text-2xl lg:text-left text-center text-xl p-4">{topic}</h1>
-              <p class=" ml-10">{description}</p>
-              <div class=" text-[#ab61ff] font-bold mt-3 ml-5">Technologies</div> <p class=" ml-10 mb-5">{technologies}</p>
+        <div class="bg-[#2c2c2c] rounded-xl py-3 px-6 h-full">
+          <div id="showcase" class="relative w-full h-full" data-carousel="slide" on:mouseenter={() => { clearInterval(interval); }} on:mouseleave={() => { startInterval(); }}>
+            <div class="relative overflow-hidden rounded-lg">
+              {#each json as item, index}
+                <div class:hidden={index !== currentIndex} class="transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-carousel-item>
+                  <div class="grid grid-cols-12 gap-6 pr-5">
+                    <div class="col-span-12 lg:col-span-8">
+                      <div class="flex flex-col md:flex-row justify-start items-center space-y-5 md:space-y-0">
+                        <h1 class="text-[#ab61ff] font-bold md:text-2xl lg:text-left text-center text-xl p-4">
+                          {item.topic}
+                        </h1>
+                        {#if (item.git !== "")}
+                        <div class="h-10 w-10 rounded-full bg-[#2c2c2c] mr-3 hover:bg-[#515151]">
+                          <a href="{item.git}">
+                            <img src=".\assets\github.png" class=" rounded-full h-full w-full p-1" alt="GitHub">
+                          </a>
+                        </div>
+                        {/if}
+                        {#if (item.web !== "")}
+                        <div class="h-10 w-10 rounded-full bg-[#2c2c2c] mr-3 hover:bg-[#515151]">
+                          <a href="{item.web}">
+                            <img src=".\assets\web.png" class=" rounded-full h-full w-full p-1" alt="GitHub">
+                          </a>
+                        </div>
+                        {/if}
+                      </div>
+                      <p class="ml-10">{item.description}</p>
+                      <div class="text-[#ab61ff] font-bold mt-3 ml-5">Technologies</div>
+                      <div class="inline ml-10 mb-5">
+                        {#each item.technologies as key}
+                          <div class="bg-[#3c3c3c] rounded inline mr-1 pl-1 pr-1">{key}</div>
+                        {/each}
+                      </div>
+                    </div>
+                    <div class="col-span-12 lg:col-span-4 mt-8">
+                      <div class="w-full h-64 p-5">
+                        <img src="{item.image}" class="rounded-xl object-scale-down h-full w-full" alt={item.topic} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {/each}
             </div>
-            <div class="col-span-12 lg:col-span-4 mt-8">
-              <div class="w-full h-64 p-5">
-                <img src="{picture}" class="rounded-xl object-cover h-full w-full" alt="" />
-              </div>
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+              {#each json as item, index}
+                <button type="button" class:active={index === currentIndex} class="w-3 h-3 rounded-full" aria-current={index === currentIndex} aria-label="{item.topic}" on:click={() => { goToSlide(index); handleManualNavigation(); }}></button>
+              {/each}
             </div>
-            
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 opacity-5 hover:opacity-100 cursor-pointer group focus:outline-none" on:click={() => { prevSlide(); handleManualNavigation(); }} data-carousel-prev>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 opacity-5 hover:opacity-100 cursor-pointer group focus:outline-none" on:click={() => { nextSlide(); handleManualNavigation(); }} data-carousel-next>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+            <!-- Indicators -->
+             <div class="flex gap-2 absolute bottom-0 -translate-x-1/2 left-1/2 items-center">
+                {#each json as item, index}
+                  <div class="inline w-3 h-3 rounded-full bg-[#7900ff]" class:bg-[#360a687e]={index !== currentIndex}></div>
+                {/each}
+             </div>
           </div>
-
-          <div class="flex flex-row justify-between items-center space-y-5 lg:space-y-0 pr-5 pl-5">
-            <div on:click={left}>
-              <img class="md:h-10 md:w-10 h-7 w-7" src="./assets/left-arrow.png" alt="Left arrow">
-            </div>
-            <div class="p-2 rounded-full bg-[#515151] mr-3">
-              <a href="{git}">
-                <img src="./assets/github.png" class=" rounded-full md:h-10 md:w-10 h-7 w-7" alt="Github">
-              </a>
-            </div>
-            <div class="p-2 rounded-full bg-[#515151] mr-3">
-              <a href="{web}">
-                <img src="./assets/web.png" class=" rounded-full md:h-10 md:w-10 h-7 w-7" alt="Github">
-              </a>
-            </div>
-            <div on:click={right}>
-              <img class="md:h-10 md:w-10 h-7 w-7" src="./assets/right-arrow.png" alt="Left arrow">
-            </div>
-          </div>
-
+          
         </div>
       </div>
       <div class="col-span-12 lg:col-span-3 h-full">
-        <div class=" bg-[#2c2c2c] rounded-3xl h-full">
+        <div class=" bg-[#2c2c2c] rounded-xl h-full">
           <div class="w-full h-full p-6">
             <div class=" text-[#ab61ff] font-bold md:text-2xl text-xl text-center">this.GetSkills()</div>
 
-            <div class=" bg-[#7809f77e] rounded-full mt-6 h-3 w-full"><div class="one bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
+            <div class=" bg-[#360a687e] rounded-full mt-6 h-3 w-full"><div class="one bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
             <div class="text-center">Application development</div>
 
-            <div class=" bg-[#7809f77e] rounded-full mt-5 h-3 w-full"><div class="two bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
-            <div class="text-center">Databases implementation</div>
+            <div class=" bg-[#360a687e] rounded-full mt-5 h-3 w-full"><div class="two bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
+            <div class="text-center">Database development</div>
 
-            <div class=" bg-[#7809f77e] rounded-full mt-5 h-3 w-full"><div class="three bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
+            <div class=" bg-[#360a687e] rounded-full mt-5 h-3 w-full"><div class="five bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
+            <div class="text-center">Web development</div>
+            
+            <div class=" bg-[#360a687e] rounded-full mt-5 h-3 w-full"><div class="three bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
             <div class="text-center">Graphic user interface</div>
 
-            <div class=" bg-[#7809f77e] rounded-full mt-5 h-3 w-full"><div class="five bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
-            <div class="text-center">Web development</div>
-
-            <div class=" bg-[#7809f77e] rounded-full mt-5 h-3 w-full"><div class="four bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
+            <div class=" bg-[#360a687e] rounded-full mt-5 h-3 w-full"><div class="four bg-[#7900ff] rounded-full h-3 animate-pulse"></div></div>
             <div class="text-center">Code with fun</div>
           </div>
         </div>
@@ -179,56 +218,47 @@
 
 <script>
 
+  import { onMount, onDestroy } from 'svelte';
   import json from '../../static/assets/projects.json';
+  let nowYear = new Date().getFullYear();
 
+  let currentIndex = 0;
   let interval;
-  let index = 0;
-  let description;
-  let topic;
-  let git;
-  let web;
-  let picture;
-  let technologies;
-  setData();
 
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % json.length;
+  }
 
-  function resetData(){
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + json.length) % json.length;
+  }
+
+  function goToSlide(index) {
+    currentIndex = index;
+  }
+
+  // Set up interval for auto-sliding
+  function startInterval() {
+    if(interval !== null){
+      clearInterval(interval);
+    }
+    interval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+  }
+
+  // Clear interval on manual navigation
+  function handleManualNavigation() {
     clearInterval(interval);
-    interval = setInterval(() => {
-      right();
-      setData();
-    }, 10000);
+    startInterval();
   }
 
-  function left(){
-    if(index === 0){
-      index = json.length - 1;
-    }
-    else{
-      index--;
-    }
-    setData();
-  }
+  // Start the interval when component is mounted
+  onMount(() => {
+    startInterval();
+  });
 
-  function right(){
-    if(index === json.length - 1){
-      index = 0;
-    }
-    else{
-      index++;
-    }
-    setData();
-  }
-
-  function setData(){
-    description = json[index].description;
-    topic = json[index].topic;
-    git = json[index].git;
-    web = json[index].web;
-    picture = json[index].image;
-    // @ts-ignore
-    technologies = json[index].technologies;
-    resetData();
-  }
+  // Clear interval when component is destroyed
+  onDestroy(() => {
+    clearInterval(interval);
+  });
 
 </script>
