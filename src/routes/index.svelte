@@ -1,4 +1,4 @@
-<div class="grid h-screen place-items-center p-3 lg:p-40 text-[#f0f0f0] font-mono select-none">
+<div class="grid h-screen place-items-center p-3 lg:pl-40 lg:pr-40 text-[#f0f0f0] font-mono select-none">
   <div class="bg-[#515151] rounded-xl p-5 mx-3">
     <div class="flex flex-col md:flex-row justify-between items-center space-y-5 md:space-y-0">
       <div class="bg-[#2c2c2c] rounded-xl py-3 px-6 text-[#7900ff] font-bold md:text-3xl text-2xl">Daniel "NiX3r" Iliev</div>
@@ -43,7 +43,7 @@
       <div class="col-span-12 lg:col-span-9 h-full">
         <div class="bg-[#2c2c2c] rounded-xl py-3 px-6 h-full">
           <h1 class="text-[#ab61ff] font-bold md:text-2xl lg:text-left text-center text-xl p-8">a passionate software engineer</h1>
-          <p class=" ml-10">I'm a young student who's been interested in programming since 2016. I've started learning in C / C++ which lasted me for about 2 years and I felt in love with it. Then I switched to learning Java and somewhat recently C# and with it came SQL connected with it. I can read some other languages as well lik PHP, JS, CSS, HTML, etc. I've already done some projects just for fun or for companies. For example I've developed app for managing house revision connected to remote MySQL server.</p>
+          <p class="ml-10">I'm software engineer enthusiastic who's into programming since 2016. I've started learning in C / C++ which lasted me for about 2 years and I felt in love with programming. Then I switched to learning Java and somewhat recently C# and with that came SQL (MySQL). I can read some other languages as well like PHP, JS, CSS, HTML, etc. I've already done some projects for personal use or for commercial use. Some of my projects are available at my page iliev.cz</p>
         </div>
       </div>
     </div>
